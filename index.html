@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel del Sol-Home</title>
 </head>
-<body>
-    <!--HTML Semántico-->
 
+<body>
+
+    <!--HTML Semántico-->
     <header>
-        <!--Elemento HTML-->
-        <h1>Este es un encabezado</h1>        
+        <nav>
+        <!--Listas Desordenadas-->
+            <ul>                
+                <li>
+                    <a href="#">Home</a>   
+                </li>
+
+                <!--Vínculos Internos-->
+                <li>
+                    <a href="./pages/habitaciones.html">Habitaciones
+                    </a>    
+                </li>
+                
+                <!--Vínculos Externos-->
+                <li>
+                    <a href="https://www.sanisidroplazahotel.com/es/gallery.html" target="_blank" >Galería de Fotos
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#promos">Promociones</a>
+                </li>
+
+                <li>
+                    <a href="/pages/contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>    
+    
     </header>
 
-    <nav>
-        <!--listas de mis páginas-->
-    </nav>
+    <!--Listas Ordenadas-->
+    <ol type="a" start="3">
+        <li>Iga Swiatek</li>
+        <li>Ons Jabeur</li>
+        <li>Anett Kontaveit</li>
+    </ol>
 
+    
     <!--Sección más importante de mi página-->
     <main>
+        <h2>Habitaciones</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error architecto nesciunt suscipit quidem minima esse? Quasi necessitatibus dignissimos consectetur velit!</p>
         <section>
-            <article></article>
+            <article>Imagenes</article>
         </section>
     </main>
 
@@ -29,7 +64,8 @@
         <!--Publicidad-->
     </aside>
 
-    <footer>
+    <footer id="promos">
+        <h3>Mi footer</h3>
         <!--Redes-->
         <!--Desarrollado por Juanma Brignole-->
     </footer>

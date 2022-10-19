@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel del sol-contacto</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+        <!--Listas Desordenadas-->
+            <ul>                
+                <li>
+                    <a href="/index.html">Home</a>   
+                </li>
+
+                <!--Vínculos Internos-->
+                <li>
+                    <a href="/pages/habitaciones.html">Habitaciones
+                    </a>    
+                </li>
+                
+                <!--Vínculos Externos-->
+                <li>
+                    <a href="https://www.sanisidroplazahotel.com/es/gallery.html" target="_blank" >Galería de Fotos
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="promociones.html">Promociones</a>
+                </li>
+
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>    
+    
+    </header>
+
+    <!--Formulario HTML-->
+
+    <h1>Te estamos esperando!</h1>
+
+    <form action="procesar.php" method="get">
+
+        <div>       
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Escriba su nombre">
+        </div>
+
+        <div>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" placeholder="Escriba su nombre">
+        </div>
+
+        <div>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" name="telefono" placeholder="Escriba su teléfono">
+        </div>
+
+        <div>
+        <label for="mail">Correo Electrónico:</label>
+        <input type="email" name="email" placeholder="Escriba su teléfono">
+        </div>
+
+        <div>
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass" placeholder="Escriba su contraseña">
+        </div>
+
+        <!--Radio-->
+        <h3>Elija su habitación: </h3>
+
+        <label for="room">Clásica</label>
+        <input type="radio" name="room" value="clasica">
+
+        <label for="room">Large Suite</label>
+        <input type="radio" name="room" value="large-suite">
+
+        <label for="room">Studio</label>
+        <input type="radio" name="room" value="studio">
+
+        <!--Checkbox-->
+        <h3>Acepta términos y condiciones</h3>
+        <input type="checkbox" name="acepta" value="1">
+
+        <!--Menú Desplegable-->
+        <h3>¿Cuántos huéspedes se van a alojar?</h3>
+        <select name="huespedes">
+            <option value="1">Un huésped</option>
+            <option value="2">Dos huéspedes</option>
+            <option value="3">Tres huéspedes</option>
+        </select>
+
+        <h3>Mensaje: </h3>
+        <textarea name="mensaje" cols="30" rows="10"></textarea>
+
+        <div>
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar Formulario</button>
+        <button type="button">Botón que no hace nada</button>
+        </div>
+    
+    </form>
+
+
+  
+</body>
+</html>
