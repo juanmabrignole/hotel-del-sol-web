@@ -1,54 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#texto-home{
+    color: red;
 }
 
-/*Background-Image*/
-
-body{
-    background-image: url('../assets/img/hdelsolbackimg.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.link-nav{
+    text-decoration: none;
 }
 
-
-.poolImg{
-    width: 40%;
+img{
+    width: 50%;
 }
-
-
-/*Botones*/
-/* From uiverse.io by @alexmaracinaru */
-button {
-    cursor: pointer;
-    font-weight: 700;
-    font-family: Helvetica,"sans-serif";
-    transition: all .2s;
-    padding: 10px 20px;
-    border-radius: 100px;
-    background: #cfef00;
-    border: 1px solid transparent;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-  }
-  
-  button:hover {
-    background: #c4e201;
-  }
-  
-  button > svg {
-    width: 34px;
-    margin-left: 10px;
-    transition: transform .3s ease-in-out;
-  }
-  
-  button:hover svg {
-    transform: translateX(5px);
-  }
-  
-  button:active {
-    transform: scale(0.95);
-  }
