@@ -1,11 +1,74 @@
-#texto-home{
-    color: red;
+/*Fuentes Externas*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/*Fuente local*/
+@font-face {
+    font-family: "lato-bold";
+    src: url("../assets/fonts/Lato-Bold.ttf");
 }
 
-.link-nav{
-    text-decoration: none;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-img{
+
+/*Selector de clase*/
+.img-home{
+    border: 5px solid blue;
+    padding: 20px;
+    margin: 30px 20px 15px 10px;
     width: 50%;
 }
+
+/*Selector de etiqueta*/
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Fuentes local*/
+h2{
+
+    /*fonts*/
+    font-family: "lato-bold", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    color: darkorange;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+
+    /*Boxmodeling*/
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 50px;
+    border: 2px solid green;
+
+    background-color: aqua;
+
+    /*flexbox*/
+}
+
+#texto-home{
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+/*background*/
+
+body{
+    background-color: magenta;
+}
+
+#body-contact{
+    background-image: url("../assets/img/hdelsolbackimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Favicon-->
-    <link rel="shortcut icon" href="assets/icons/reception.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/icons/newIcon.svg" type="image/x-icon">
     <!--Vinculación Externa CSS-->
     <link rel="stylesheet" href="css/estilos.css">
     <title>Hotel del Sol-Home</title>
@@ -29,9 +29,8 @@
                     </a>    
                 </li>
                 
-                <!--Vínculos Externos-->
                 <li>
-                    <a class="link-nav" href="https://www.sanisidroplazahotel.com/es/gallery.html" target="_blank" >Galería de Fotos
+                    <a class="link-nav" href="./pages/galeria-de-fotos.html" target="_blank" >Galería de Fotos
                     </a>
                 </li>
                 
@@ -45,43 +44,46 @@
             </ul>
         </nav>
         
-        <h1 class="encabezadoHome">Hotel del Sol</h1>
+        <h1>Hotel del Sol</h1>
     
     </header>
-
-    <!--Listas Ordenadas
-    <ol type="a" start="3">
-        <li>Iga Swiatek</li>
-        <li>Ons Jabeur</li>
-        <li>Anett Kontaveit</li>
-    </ol>
-    -->
-
     
     <!--Sección más importante de mi página-->
-    <main>
+    <main id="principal-home">
 
         <section>
             <article>
         <h2>Te estamos esperamos</h2>
-        <p id="texto-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error architecto nesciunt suscipit quidem minima esse? Quasi necessitatibus dignissimos consectetur velit!</p>
+        <p id="texto-home">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum perferendis pariatur quia, quisquam iusto alias fugiat magni, eius optio consequuntur, soluta sequi in totam! Itaque perspiciatis obcaecati ea? Nemo tenetur vel, animi magni quia cum illum voluptatem. Hic nesciunt ea et quam, ipsa vitae corrupti autem amet eveniet dolorum recusandae tempore facilis nisi fugiat animi perferendis earum consequatur. Id eum possimus quod omnis voluptas dolorem perferendis magnam ducimus laborum voluptates aut officiis quibusdam ipsa distinctio adipisci soluta, deserunt repellat totam voluptatem hic nihil doloremque? Exercitationem autem, nulla laborum consequuntur nostrum, aperiam dolor, quo dolores commodi architecto illum voluptatem ut harum!</p>
             </article>
 
             <article>
-                <img src="./assets/img/hdelsolpool.jpg" alt="foto-pileta-hotel-del-sol">
+                <img class="img-home" src="./assets/img/hdelsolpool.jpg" alt="foto-pileta-hotel-del-sol">
             </article>
         </section>
         
     </main>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error architecto nesciunt suscipit quidem minima esse? Quasi necessitatibus dignissimos consectetur velit!</p>
+
+    <section>
+        <h2>HDS Music</h2>
+        
+    </section>
     
     <section>
         <article>
-            <!--Multimedia Iframe-->
-            
+            <!--Multimedia Iframe Youtube-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MkVpi6G5Mx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </article>
     </section>
+
+    <section>
+        <video class="video" controls src="./assets/videos/hotel-del-sol-institucional.mp4"></video>
+    </section>
+
+
+    
 
     <footer id="promos">
         <h3>Mi footer</h3>
