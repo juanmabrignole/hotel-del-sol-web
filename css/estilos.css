@@ -15,6 +15,7 @@
 
 /*Selector de clase*/
 .img-home{
+    border-radius: 50px;
     border: 5px solid blue;
     padding: 20px;
     margin: 30px 20px 15px 10px;
@@ -48,7 +49,6 @@ h2{
 
     background-color: aqua;
 
-    /*flexbox*/
 }
 
 #texto-home{
@@ -58,12 +58,13 @@ h2{
     line-height: 25px;
 }
 
-/*background*/
-
+/*background color*/
 body{
-    background-color: magenta;
+    background-color: beige;
 }
 
+
+/*Background Image Contacto*/
 #body-contact{
     background-image: url("../assets/img/hdelsolbackimg.jpg");
     background-repeat: no-repeat;
@@ -71,4 +72,85 @@ body{
     background-position: center;
 }
 
+/*Comentario en CSS*/
 
+/*Flexbox*/
+
+.flex-container{
+    border: 1px solid black;
+    background: #ccc;
+    padding: 20px;
+    margin: 10px;
+    height: 800px;
+
+    
+    /*propiedades de flexbox*/
+    /*Activamos flex*/
+    display: flex;
+    /*Define el eje principal o main axis*/
+    flex-direction: row;
+    /*flex-wrap*/
+    flex-wrap: wrap;
+    /*flex-flow: row wrap;*/
+    /*Eje principal*/
+    justify-content: flex-start;
+    /*eje secundario*/
+    align-items: flex-start;
+    /*espaciado entre lineas*/
+    align-content: space-around;
+}
+
+.caja{
+    /*box-modeling*/
+    width: 120px;
+    height: 120px;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 5px;
+
+    /*Fonts*/
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    line-height: 120px;
+    text-align: center;
+
+}
+
+.caja1{
+    background-color: lightcoral;
+    order: 2;
+    flex-grow: 1;
+}
+
+.caja2{
+    background-color: lightgreen;
+    order: 3;
+    flex-grow: 5;
+}
+
+.caja3{
+    background-color: lightsalmon;
+    order: 1;
+    flex-grow: 2;
+}
+
+/*efecto parallax*/
+
+.banner{
+    width: 100%;
+    height: 700px;
+    background-image: url("../assets/img/hdelsolbackimg.jpg");
+    background-size: cover;
+    /*efecto parallax*/
+    background-attachment: fixed;
+}
+
+.banner2{
+    width: 100%;
+    height: 700px;
+    background-image: url("../assets/img/hdelsolpool.jpg");
+    background-size: cover;
+    /*efecto parallax*/
+    background-attachment: fixed;
+}
