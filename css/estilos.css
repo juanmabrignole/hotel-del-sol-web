@@ -180,7 +180,7 @@ a{
 
 .title-grid{
     color: black;
-    font-family: "roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 35px;
     text-transform: uppercase;
     text-align: center;
@@ -188,40 +188,53 @@ a{
     margin: 20px;
 }
 
-.contenedor{
+.grid-container{
+    /*Box-modeling*/
     width: 90%;
     max-width: 1000px;
-    border: 10px solid black;
+    border: 5px solid black;
     margin: auto;
+
+    /*Fonts*/
     font-size: 50px;
     line-height: 50px;
     text-align: center;
 
-    /*activamos grid*/
+    /*Activamos CSS GRID*/
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 150px 300px;
-    grid-gap: 10px;
-    justify-items: end; /*Eje hirizontal*/
-    align-items: center; /*Eje Vertical*/
+    /*Defino la cantidad de columnas que va a tener mi grilla*/
+    grid-template-columns: 1fr 2fr 1fr; /*Con fracciones*/
+    /*Defino la cantidad de filas que va a tener mi grilla*/
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    /*justify-items: center; /*Eje Horizontal*/
+    /*align-items: flex-start ; /*Eje Vertical*/
+ 
 }
 
-/*divs que estan directamente adentro de la class contenedor*/
-.contenedor > div{
+/*divs que están directamente adentro del class grid-container*/
+
+.grid-container > div{
     display: block;
     padding: 20px;
-    color: #fff;
+    color: white;
     background: #2f89fc;
-    box-shadow: 2px 2px 10px rgba(0,0,0,.25);
+    box-shadow: 2px 2px 10px rgba(0, 0n, 0, .25);
 }
 
+/*Propiedades de los hijos GRIDS*/
 .box-1{
-    justify-self: center; /*Eje Horizontal*/
-    align-self: flex-start; /* Eje Vertical*/
-
+    justify-self: center; /*Eje horizontal*/
+    /*align-self: flex-start; /*Eje Vertical*/
 }
 
-/*habitaciones con grid*/
+.box-7{
+    justify-self: start; /*Eje horizontal*/
+    /*align-items: center;*/
+}
+
+/*Habitaciones con CSS GRID*/
 .room-img{
     width: 350px;
 }
@@ -230,24 +243,27 @@ a{
     width: 90%;
     max-width: 1000px;
     margin: auto;
+
+    /*activamos grid*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 150px;
     gap: 10px;
+
 }
 
-/*Botones habitaciones*/
+/*Botones prediseñados*/
 button {
     /* Variables */
    --button_radius: 0.75em;
    --button_color: #e8e8e8;
    --button_outline_color: #000000;
-   font-size: 12px;
-   margin-top: 10px;
+   font-size: 14px;
    font-weight: bold;
    border: none;
    border-radius: var(--button_radius);
    background: var(--button_outline_color);
+   margin-top: 10px;
   }
   
   .button_top {
@@ -271,3 +287,93 @@ button {
     /* Push the button downwards when pressed */
    transform: translateY(0);
   }
+
+/*Grid Responsive*/
+
+.grid-contenedor-responsive{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+
+    /*activamos grid*/
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    /*grid por areas*/
+    grid-template-areas: 
+    "header    header    header"
+    "contenido contenido sidebar"
+    "widget-1  widget-1  widget-2"
+    "footer    footer    footer"
+    ;
+}
+
+.grid-contenedor-responsive > div,
+.grid-contenedor-responsive .header,
+.grid-contenedor-responsive .contenido,
+.grid-contenedor-responsive .sidebar,
+.grid-contenedor-responsive .footer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.grid-contenedor-responsive .header{
+    background-color: #12203e;
+    color: #fff;
+    /*grid-column: 1/4;*/
+    grid-area: header;
+}
+
+.grid-contenedor-responsive .contenido{
+    grid-area: contenido;
+}
+
+.grid-contenedor-responsive .sidebar{
+    background-color: #faa43d;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: sidebar;
+}
+
+.grid-contenedor-responsive .widget-1,
+.grid-contenedor-responsive .widget-2{
+    background-color: #55a8fd;
+    color: #fff;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-contenedor-responsive .widget-1{
+    grid-area: widget-1;
+}
+
+.grid-contenedor-responsive .footer{
+    background-color: #12203e;
+    color: #fff;
+    /*grid-column: span 3;*/
+    grid-area: footer;
+}
+
+/*MediaQueries con Grid-Areas*/
+@media screen and (max-width: 768px) {
+    .grid-contenedor-responsive{
+        grid-template-areas: 
+        "header header header"
+        "contenido contenido contenido"
+        "sidebar sidebar sidebar"
+        "widget-1 widget-1 widget-2"
+        "footer footer footer"
+        ;
+    }   
+}
+
+
+
+
