@@ -19,12 +19,50 @@
     border: 5px solid blue;
     padding: 20px;
     margin: 30px 20px 15px 10px;
-    width: 50%;
+    width: 500px;
 }
 
 /*Selector de etiqueta*/
+/*Ejemplo Transiciones y animaciones*/
+
+.body-promociones{
+    background-color: black;
+}
+
 h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'lato-bold', sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: gray;
+}
+
+h1 span{
+    transition: .5s linear;
+
+}
+
+/*paso el mousse por h1 y el primer span se mueve a la derecha*/
+h1:hover span:nth-child(1){
+    margin-right: 5px;
+}
+
+/*Después de pasarle el mousse*/
+h1:hover span:nth-child(1):after{
+    content: "'";
+}
+
+h1:hover span:nth-child(2){
+    margin-left: 30px;
+}
+
+h1:hover span{
+    /*Sombra horizontal - sombra vertical - blur - color de la sombra*/
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff
+    ;
+    color: #fff;
 }
 
 /*Fuentes local*/
@@ -288,43 +326,47 @@ button {
    transform: translateY(0);
   }
 
-/*Grid Responsive*/
+  /*Grid áreas responsive*/
 
 .grid-contenedor-responsive{
     width: 90%;
     max-width: 1000px;
     margin: 20px auto;
 
-    /*activamos grid*/
+    /*activamos grid en el contenedor principal*/
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
 
-    /*grid por areas*/
+    /*grid áreas*/
     grid-template-areas: 
-    "header    header    header"
-    "contenido contenido sidebar"
-    "widget-1  widget-1  widget-2"
-    "footer    footer    footer"
+    "header     header      header"
+    "contenido  contenido   sidebar"
+    "widget-1   widget-1    widget-2"
+    "footer     footer      footer"
     ;
-}
+} 
 
 .grid-contenedor-responsive > div,
 .grid-contenedor-responsive .header,
 .grid-contenedor-responsive .contenido,
 .grid-contenedor-responsive .sidebar,
-.grid-contenedor-responsive .footer {
+.grid-contenedor-responsive .footer{
     background-color: #fff;
     padding: 20px;
     border-radius: 4px;
 }
 
 .grid-contenedor-responsive .header{
-    background-color: #12203e;
+    background-color: #b0c49a;
     color: #fff;
-    /*grid-column: 1/4;*/
+    /*defino las áreas que va a abarcar mi componente*/
     grid-area: header;
+    /*forma abreviada*/
+    /*grid-column: 1/4;*/
+    /*grid-column-start: 1;*/
+    /*grid-column-end: 3;*/
 }
 
 .grid-contenedor-responsive .contenido{
@@ -333,6 +375,7 @@ button {
 
 .grid-contenedor-responsive .sidebar{
     background-color: #faa43d;
+    color: #fff;
     min-height: 100px;
     display: flex;
     justify-content: center;
@@ -354,25 +397,106 @@ button {
     grid-area: widget-1;
 }
 
-.grid-contenedor-responsive .footer{
-    background-color: #12203e;
-    color: #fff;
-    /*grid-column: span 3;*/
-    grid-area: footer;
+.grid-contenedor-responsive .widget-2{
+    grid-area: widget-2;
 }
 
-/*MediaQueries con Grid-Areas*/
-@media screen and (max-width: 768px) {
-    .grid-contenedor-responsive{
-        grid-template-areas: 
-        "header header header"
-        "contenido contenido contenido"
-        "sidebar sidebar sidebar"
-        "widget-1 widget-1 widget-2"
-        "footer footer footer"
-        ;
-    }   
+.grid-contenedor-responsive .footer{
+    background-color: #33353b;
+    color: white;
+    /*utilizando las column lines*/
+    /*grid-column: 1/4;*/
+    /*grid-column: span 3;*/
+    grid-area: footer;
+
+    /*centro con flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/*Gradientes*/
+
+.te-estamos-esperando{
+    font-size: 35px;
+    font-family: "roboto", sans-serif;
+    color: black;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 10px;
+    /*background-image: linear-gradient(to right, red, yellow);*/
+    background-image: linear-gradient( 68.4deg,  rgba(99,251,215,1) -0.4%, rgba(5,222,250,1) 100.2% );
+}
+
+/*Transform*/
+#logo{
+    /*translate*/
+    transform: translate(100px,100px);
+    /*Animaciones*/
+    animation-name: efecto_logo;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    
+}
+
+@keyframes efecto_logo {
+    0%{
+        width: 100px;
+    }
+    25%{
+        width: 50px;
+    }
+    50%{
+        width: 200px;
+    }
+    75%{
+        width: 300px;
+    }
+    100%{
+        width: 100px;
+    }
+    
+}
+
+.img-home{
+    /*rotate*/
+    /*transform: rotateY(250deg);*/
+    /*scale*/
+    /*transform: scaleX(2);*/
+    /*skew*/
+    /*transform: skew(20deg, 10deg);*/
+    /*transiciones*/
+    height: 250px;
+    transition: height 2s;
+}
+
+
+.img-home:hover{
+    height: 300px;
+}
+
+
+
+
+/*mediaQueries*/
+/*Grid Responsive*/
+
+@media screen and (max-width:768px) {
+    .grid-contenedor-responsive {
+        grid-template-areas: 
+        "header     header      header"
+        "contenido  contenido   contenido"
+        "sidebar    sidebar     sidebar"
+        "widget-1   widget-1    widget-2"
+        "footer     footer      footer" 
+        ;
+    }
+    
+}
+
 
 
 
