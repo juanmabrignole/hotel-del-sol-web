@@ -23,6 +23,7 @@
 }
 
 /*Selector de etiqueta*/
+
 /*Ejemplo Transiciones y animaciones*/
 
 .body-promociones{
@@ -31,15 +32,14 @@
 
 h1 {
     font-family: 'lato-bold', sans-serif;
-    letter-spacing: 5px;
     text-align: center;
     text-transform: uppercase;
     color: gray;
+    cursor: pointer;
 }
 
 h1 span{
     transition: .5s linear;
-
 }
 
 /*paso el mousse por h1 y el primer span se mueve a la derecha*/
@@ -47,23 +47,37 @@ h1:hover span:nth-child(1){
     margin-right: 5px;
 }
 
-/*Después de pasarle el mousse*/
-h1:hover span:nth-child(1):after{
+/*Despúes del pasar el mousse*/
+h1:hover span:nth-child(1)::after{
     content: "'";
 }
 
 h1:hover span:nth-child(2){
-    margin-left: 30px;
+   margin-left: 30px;
 }
 
 h1:hover span{
-    /*Sombra horizontal - sombra vertical - blur - color de la sombra*/
-    text-shadow: 0 0 10px #fff,
+    /*Sombra horizontal (x) - Sombra Vertical (y) - blur - color de la sobra*/
+    text-shadow: 
+    0 0 10px #fff,
     0 0 20px #fff,
     0 0 40px #fff
     ;
     color: #fff;
 }
+
+
+
+
+
+.animacion-personalizada{
+    /*animate.css*/
+    animation: pulse;
+    animation-delay: 5s;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+}
+
 
 /*Fuentes local*/
 h2{
@@ -420,28 +434,44 @@ button {
 .te-estamos-esperando{
     font-size: 35px;
     font-family: "roboto", sans-serif;
-    color: black;
+    color: #000000;
+    
     width: 90%;
     max-width: 1000px;
     margin: 20px auto;
     border-radius: 10px;
-    /*background-image: linear-gradient(to right, red, yellow);*/
-    background-image: linear-gradient( 68.4deg,  rgba(99,251,215,1) -0.4%, rgba(5,222,250,1) 100.2% );
+    border: 1px solid black;
+
+    /*gradientes*/
+    /*Linear-gradient*/
+    /*background-image: linear-gradient(to right, red, yellow, gray, green, blue, black);*/
+    /*radial-gradient*/
+    /*background-image: radial-gradient(red, yellow);*/
+    /*Sitio web gradientes*/
+    background-image: linear-gradient( 181deg,  rgba(225,109,245,1) 6.9%, rgba(78,248,231,1) 112.8% );
 }
 
-/*Transform*/
+/*Transformaciones*/
+
 #logo{
-    /*translate*/
-    transform: translate(100px,100px);
-    /*Animaciones*/
-    animation-name: efecto_logo;
+    /*Primer valor eje x (Izquierda a derecha - segundo valor eje y hacia abajo*/
+    /*transform: translateX(100px);*/
+    /*transform: translateY(200px);*/
+    /*animaciones*/
+    /*animation-name: efecto_logo;
     animation-iteration-count: 2;
-    animation-timing-function: ease-out;
-    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-delay: 2s;*/
+
+    /*animate.css*/
+    animation: heartBeat;
     animation-delay: 2s;
-    
+    animation-duration: 2s;
+    animation-iteration-count: 2;
 }
 
+/*
 @keyframes efecto_logo {
     0%{
         width: 100px;
@@ -460,22 +490,26 @@ button {
     }
     
 }
+*/
 
 .img-home{
-    /*rotate*/
-    /*transform: rotateY(250deg);*/
-    /*scale*/
-    /*transform: scaleX(2);*/
-    /*skew*/
-    /*transform: skew(20deg, 10deg);*/
-    /*transiciones*/
+    /*Rotate*/
+    /*transform: rotate(90deg);*/
+    /*Scale*/
+    /*transform:scaleX(1);
+    transform:scaleY(2);*/
+    /*skew- torcer- sesgar*/
+    /*transform: skew(30deg);*/
+    /*transform: skewX(20deg);
+    transform: skewY(30deg);*/
+    cursor: pointer;
     height: 250px;
-    transition: height 2s;
+    transition: height 2s, width 5s;
 }
 
-
 .img-home:hover{
-    height: 300px;
+    height: 350px;
+    width: 600px;
 }
 
 
