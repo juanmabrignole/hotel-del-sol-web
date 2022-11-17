@@ -119,7 +119,7 @@ body{
 /*Background Image Contacto*/
 #body-contact{
     color: white;
-    background-image: url("../assets/img/hdelsolbackimg.jpg");
+    /*background-image: url("../assets/img/hdelsolbackimg.jpg");*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -205,6 +205,16 @@ a{
     background-color: lightsalmon;
     order: 1;
     flex-grow: 2;
+}
+
+/*Form con bootstrap*/
+
+label{
+    color: #000000;
+}
+
+h1, h3{
+    color:#000000;
 }
 
 /*efecto parallax*/
@@ -511,6 +521,11 @@ button {
     height: 350px;
     width: 600px;
 }
+
+.col{
+    border: 1px solid #000000;
+}
+
 
 
 

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Favicon-->
     <link rel="shortcut icon" href="../assets/icons/newIcon.svg" type="image/x-icon">
+   <!--Bootstrap-->
+   <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
     <!--Hoja de Estilos Externa CSS-->
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Hotel del sol-contacto</title>
@@ -39,16 +41,20 @@
 
     <h1>Te estamos esperando!</h1>
 
-    <form action="procesar.php" method="get">
+    <div class="container">
+    
+    <form class="row" action="procesar.php" method="get">
 
-        <div>       
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" placeholder="Escriba su nombre">
+        <div class="row m-2">
+        <div class="col-6">       
+        <label class="form-label"  for="nombre">Nombre:</label>
+        <input class="form-control" type="text" name="nombre" placeholder="Escriba su nombre">
         </div>
 
-        <div>
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" placeholder="Escriba su nombre">
+        <div class="col-6">
+        <label class="form-label" for="apellido">Apellido:</label>
+        <input class="form-control" type="text" name="apellido" placeholder="Escriba su nombre">
+        </div>
         </div>
 
         <div>
@@ -94,14 +100,13 @@
         <textarea name="mensaje" cols="30" rows="10"></textarea>
 
         <div>
-        <button type="submit">Enviar</button>
-        <button type="reset">Borrar Formulario</button>
-        <button type="button">Botón que no hace nada</button>
+        <button class="btn btn-outline-primary" type="submit">Enviar</button>
+       
         </div>
     
     </form>
+</div>
 
-
-  
+    <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
