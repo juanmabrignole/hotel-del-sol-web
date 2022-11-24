@@ -1,0 +1,733 @@
+@import "fuentes";
+@import "background";
+
+/*Variables Globales*/
+$background-principal: gray;
+
+
+/*Fuentes Externas*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/*Fuente local*/
+@font-face {
+    font-family: "lato-bold";
+    src: url("../assets/fonts/Lato-Bold.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Selector de clase*/
+.img-home{
+    border-radius: 50px;
+    border: 5px solid blue;
+    padding: 20px;
+    margin: 30px 20px 15px 10px;
+    width: 500px;
+}
+
+/*Selector de etiqueta*/
+
+/*Ejemplo Transiciones y animaciones*/
+
+/*
+.body-promociones{
+    background-color: black;
+}
+*/
+
+h1 {
+    font-family: $font-secundaria;
+    text-align: center;
+    text-transform: uppercase;
+    color: gray;
+    cursor: pointer;
+}
+
+h1 span{
+    transition: .5s linear;
+}
+
+/*paso el mousse por h1 y el primer span se mueve a la derecha*/
+h1:hover span:nth-child(1){
+    margin-right: 5px;
+}
+
+/*Despúes del pasar el mousse*/
+h1:hover span:nth-child(1)::after{
+    content: "'";
+}
+
+h1:hover span:nth-child(2){
+   margin-left: 30px;
+}
+
+h1:hover span{
+    /*Sombra horizontal (x) - Sombra Vertical (y) - blur - color de la sobra*/
+    text-shadow: 
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff
+    ;
+    color: #fff;
+}
+
+.animacion-personalizada{
+    /*animate.css*/
+    animation: pulse;
+    animation-delay: 5s;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+}
+
+
+/*Fuentes local*/
+
+h2 {
+
+    /*fonts*/
+    font-family: "lato-bold", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    color: darkorange;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+
+    /*Boxmodeling*/
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 50px;
+    border: 2px solid green;
+    //variable Local
+    $background: #f10086;
+    background-color: $background-back;
+}
+
+#texto-home{
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+/*background color*/
+body{
+    background-color: beige;
+}
+
+
+/*Background Image Contacto*/
+#body-contact{
+    color: white;
+    /*background-image: url("../assets/img/hdelsolbackimg.jpg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Comentario en CSS*/
+
+/*Flexbox*/
+
+/*Navbar con Flexbox*/
+
+nav{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Flexbox práctica*/
+
+.flex-container{
+    border: 1px solid black;
+    background: #ccc;
+    padding: 20px;
+    margin: 10px;
+    height: 800px;
+
+    
+    /*propiedades de flexbox*/
+    /*Activamos flex*/
+    display: flex;
+    /*Define el eje principal o main axis*/
+    flex-direction: row;
+    /*flex-wrap*/
+    flex-wrap: wrap;
+    /*flex-flow: row wrap;*/
+    /*Eje principal*/
+    justify-content: flex-start;
+    /*eje secundario*/
+    align-items: flex-start;
+    /*espaciado entre lineas*/
+    align-content: space-around;
+}
+
+.caja{
+    /*box-modeling*/
+    width: 120px;
+    height: 120px;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 5px;
+
+    /*Fonts*/
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    line-height: 120px;
+    text-align: center;
+
+}
+
+.caja1{
+    background-color: lightcoral;
+    order: 2;
+    flex-grow: 1;
+}
+
+.caja2{
+    background-color: lightgreen;
+    order: 3;
+    flex-grow: 5;
+}
+
+.caja3{
+    background-color: lightsalmon;
+    order: 1;
+    flex-grow: 2;
+}
+
+/*Form con bootstrap*/
+
+label{
+    color: #000000;
+}
+
+h1, h3{
+    color:#000000;
+}
+
+/*efecto parallax*/
+
+.banner{
+    width: 100%;
+    height: 700px;
+    background-image: url("../assets/img/hdelsolbackimg.jpg");
+    background-size: cover;
+    /*efecto parallax*/
+    background-attachment: fixed;
+}
+
+.banner2{
+    width: 100%;
+    height: 700px;
+    background-image: url("../assets/img/hdelsolpool.jpg");
+    background-size: cover;
+    /*efecto parallax*/
+    background-attachment: fixed;
+}
+
+
+/*CSS GRID Práctica*/
+
+.title-grid{
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 20px;
+}
+
+.grid-container{
+    /*Box-modeling*/
+    width: 90%;
+    max-width: 1000px;
+    border: 5px solid black;
+    margin: auto;
+
+    /*Fonts*/
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+
+    /*Activamos CSS GRID*/
+    display: grid;
+    /*Defino la cantidad de columnas que va a tener mi grilla*/
+    grid-template-columns: 1fr 2fr 1fr; /*Con fracciones*/
+    /*Defino la cantidad de filas que va a tener mi grilla*/
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    /*justify-items: center; /*Eje Horizontal*/
+    /*align-items: flex-start ; /*Eje Vertical*/
+ 
+}
+
+/*divs que están directamente adentro del class grid-container*/
+
+.grid-container > div{
+    display: block;
+    padding: 20px;
+    color: white;
+    background: #2f89fc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .25);
+}
+
+/*Propiedades de los hijos GRIDS*/
+.box-1{
+    justify-self: center; /*Eje horizontal*/
+    /*align-self: flex-start; /*Eje Vertical*/
+}
+
+.box-7{
+    justify-self: start; /*Eje horizontal*/
+    /*align-items: center;*/
+}
+
+/*Habitaciones con CSS GRID*/
+.room-img{
+    width: 350px;
+}
+
+.grid-imagenes{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+
+    /*activamos grid*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px;
+    gap: 10px;
+
+}
+
+/*Botones prediseñados*/
+button {
+    /* Variables */
+   --button_radius: 0.75em;
+   --button_color: #e8e8e8;
+   --button_outline_color: #000000;
+   font-size: 14px;
+   font-weight: bold;
+   border: none;
+   border-radius: var(--button_radius);
+   background: var(--button_outline_color);
+   margin-top: 10px;
+  }
+  
+  .button_top {
+   display: block;
+   box-sizing: border-box;
+   border: 2px solid var(--button_outline_color);
+   border-radius: var(--button_radius);
+   padding: 0.75em 1.5em;
+   background: var(--button_color);
+   color: var(--button_outline_color);
+   transform: translateY(-0.2em);
+   transition: transform 0.1s ease;
+  }
+  
+  button:hover .button_top {
+    /* Pull the button upwards when hovered */
+   transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+    /* Push the button downwards when pressed */
+   transform: translateY(0);
+  }
+
+  /*Grid áreas responsive*/
+
+.grid-contenedor-responsive{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+
+    /*activamos grid en el contenedor principal*/
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+
+    /*grid áreas*/
+    grid-template-areas: 
+    "header     header      header"
+    "contenido  contenido   sidebar"
+    "widget-1   widget-1    widget-2"
+    "footer     footer      footer"
+    ;
+} 
+
+.grid-contenedor-responsive > div,
+.grid-contenedor-responsive .header,
+.grid-contenedor-responsive .contenido,
+.grid-contenedor-responsive .sidebar,
+.grid-contenedor-responsive .footer{
+    //llamada a variable Global
+    background-color: $background-principal;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.grid-contenedor-responsive .header{
+    background-color: #b0c49a;
+    color: #fff;
+    /*defino las áreas que va a abarcar mi componente*/
+    grid-area: header;
+    /*forma abreviada*/
+    /*grid-column: 1/4;*/
+    /*grid-column-start: 1;*/
+    /*grid-column-end: 3;*/
+}
+
+.grid-contenedor-responsive .contenido{
+    grid-area: contenido;
+}
+
+.grid-contenedor-responsive .sidebar{
+    background-color: #faa43d;
+    color: #fff;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: sidebar;
+}
+
+.grid-contenedor-responsive .widget-1,
+.grid-contenedor-responsive .widget-2{
+    background-color: #55a8fd;
+    color: #fff;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-contenedor-responsive .widget-1{
+    grid-area: widget-1;
+}
+
+.grid-contenedor-responsive .widget-2{
+    grid-area: widget-2;
+}
+
+.grid-contenedor-responsive .footer{
+    background-color: #33353b;
+    color: white;
+    /*utilizando las column lines*/
+    /*grid-column: 1/4;*/
+    /*grid-column: span 3;*/
+    grid-area: footer;
+
+    /*centro con flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Gradientes*/
+
+.te-estamos-esperando{
+    font-size: 35px;
+    font-family: "roboto", sans-serif;
+    color: #000000;
+    
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 1px solid black;
+
+    /*gradientes*/
+    /*Linear-gradient*/
+    /*background-image: linear-gradient(to right, red, yellow, gray, green, blue, black);*/
+    /*radial-gradient*/
+    /*background-image: radial-gradient(red, yellow);*/
+    /*Sitio web gradientes*/
+    background-image: linear-gradient( 181deg,  rgba(225,109,245,1) 6.9%, rgba(78,248,231,1) 112.8% );
+}
+
+/*Transformaciones*/
+
+#logo{
+    /*Primer valor eje x (Izquierda a derecha - segundo valor eje y hacia abajo*/
+    /*transform: translateX(100px);*/
+    /*transform: translateY(200px);*/
+    /*animaciones*/
+    /*animation-name: efecto_logo;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-delay: 2s;*/
+
+    /*animate.css*/
+    animation: heartBeat;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+
+/*
+@keyframes efecto_logo {
+    0%{
+        width: 100px;
+    }
+    25%{
+        width: 50px;
+    }
+    50%{
+        width: 200px;
+    }
+    75%{
+        width: 300px;
+    }
+    100%{
+        width: 100px;
+    }
+    
+}
+*/
+
+.img-home{
+    /*Rotate*/
+    /*transform: rotate(90deg);*/
+    /*Scale*/
+    /*transform:scaleX(1);
+    transform:scaleY(2);*/
+    /*skew- torcer- sesgar*/
+    /*transform: skew(30deg);*/
+    /*transform: skewX(20deg);
+    transform: skewY(30deg);*/
+    cursor: pointer;
+    height: 250px;
+    transition: height 2s, width 5s;
+}
+
+.img-home:hover{
+    height: 350px;
+    width: 600px;
+}
+
+.col{
+    border: 1px solid #000000;
+}
+
+a{
+    font-size: 20px;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-decoration: underline;
+}
+
+/*Pseudoclases*/
+a:hover{
+    background: #f10086;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+a:active{
+    background: blueviolet;
+    color: black;
+}
+
+a:link{
+    color: green;
+}
+
+a:visited{
+    color: red;
+}
+
+/*First & last-child*/
+.grupo{
+    width: 500px;
+    margin: 20px auto;
+    background-color: gray;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.parrafos p:first-child{
+    background: red;
+    color: white;
+}
+
+.parrafos p:last-child{
+    background: black;
+    color: white;
+}
+
+/*First and last-type*/
+.elementos p:first-of-type{
+    background: #f10086;
+    color: white;
+}
+
+.elementos p:last-of-type{
+    background: white;
+    color: black;
+}
+
+.elementos div:first-of-type{
+    background: green;
+    color: #33353b;
+}
+
+.elementos div:last-of-type{
+    background: blue;
+    color: white;
+}
+
+/*nth-child() and nth-last-child()*/
+
+/*nth-child()*/
+.lista :nth-child(even){
+    background: #00cdf1;
+    color: black;
+}
+
+/*
+.lista :nth-child(4){
+    background: #00cdf1;
+    color: white;
+}
+*/
+
+
+/*nth-last-child()*/
+/*
+.lista :nth-last-child(even){
+    background: red;
+    color: white;
+}
+
+.lista :nth-last-child(4){
+    background: green;
+    color: black;
+}
+*/
+
+/*SASS*/
+
+/*Anidacion-nesting I*/
+.clase1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    padding: 15px;
+    
+    .clase2 {
+        font-size: 25px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+
+        h1 {
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+            p{
+                font-size: 26px;
+            }
+        }
+
+        
+    }
+}
+
+/*Anidacion-nestingII*/
+ul {
+    list-style: none;
+
+         li {
+              padding: 15px;
+              display: inline-block;
+                a {
+                    text-decoration: none;
+                           font-size: 16px;
+                    color: #444;
+                }
+                }
+   }
+
+/*USO DEL & CON EL NESTING*/
+li {
+    color:blue;
+         
+    &:active{
+            color:red;
+            }
+    }
+
+
+
+
+
+
+
+
+
+
+
+/*mediaQueries*/
+/*Grid Responsive*/
+
+@media screen and (max-width:768px) {
+    .grid-contenedor-responsive {
+        grid-template-areas: 
+        "header     header      header"
+        "contenido  contenido   contenido"
+        "sidebar    sidebar     sidebar"
+        "widget-1   widget-1    widget-2"
+        "footer     footer      footer" 
+        ;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+    .body-promociones{
+        background-color: #faa43d;
+    }
+
+    p{
+        color: green;
+        text-align: right;
+    }
+    
+}
+
+@media screen and (min-width: 901px) and (max-width: 1400px) {
+    .body-promociones{
+        background-color: #00cdf1;
+    }
+
+    p{
+        color: red;
+        text-align: center;
+    }
+    
+}
+
+
+
+
+
+
+
