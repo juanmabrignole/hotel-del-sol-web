@@ -3,35 +3,30 @@
 /*Operadores Matemáticos*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 body {
-  /*condicional IF*/
   background-color: red;
   padding: 20px;
   width: 1080px;
 }
 
-/*Bucle For*/
+/*Bucle FOR*/
 h1 {
-  font-size: 2rem;
+  font-size: 10px;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 20px;
 }
 
 h3 {
-  font-size: 6rem;
+  font-size: 30px;
 }
 
 h4 {
-  font-size: 8rem;
+  font-size: 40px;
 }
 
 h5 {
-  font-size: 10rem;
-}
-
-h6 {
-  font-size: 12rem;
+  font-size: 50px;
 }
 
 /*Bucle Each*/
@@ -51,6 +46,14 @@ h6 {
   background-color: blue;
 }
 
+.pink {
+  background-color: pink;
+}
+
+.black {
+  background-color: black;
+}
+
 /*Maps*/
 div {
   background-color: green;
@@ -60,14 +63,14 @@ div {
 }
 
 /*Extend*/
-.card, .usecard {
+.card, .usercard {
   background: #fff;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 16px;
   box-shadow: 1px 1px 12px 0px;
 }
 
-/*Mixin / Funciones*/
+/*Mixins*/
 .caja {
   border: 10px solid red;
   border-radius: 10px;
