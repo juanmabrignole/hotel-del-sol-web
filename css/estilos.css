@@ -83,6 +83,70 @@ div {
   box-shadow: 0px 0px 5px yellow;
 }
 
+/*Maps II*/
+/*Each*/
+.boton--twitter {
+  background-color: #55acee;
+}
+
+.boton--facebook {
+  background-color: #3a5795;
+}
+
+.boton--send-mail {
+  background-color: #C25E30;
+}
+
+.boton--instagram {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.boton--linkding {
+  background-color: #0e76a8;
+}
+
+.boton--size-banner {
+  background-color: 25px;
+}
+
+.banner, .banner2 {
+  background-color: #55acee;
+  width: 25px;
+}
+
+/*Extend II*/
+.banner, .banner2 {
+  width: 100%;
+  height: 700px;
+  background-color: gray;
+}
+
+.banner2 {
+  font-size: 25px;
+  color: green;
+}
+
+/*Mixin II*/
+.banner2 {
+  width: 100%;
+  height: 500px;
+  background-color: #C25E30;
+  color: red;
+}
+
+/*Mixin III*/
+.banner2 {
+  width: 500px;
+  height: 50px;
+  background-color: red;
+}
+
+.banner3 {
+  width: 200px;
+  height: 150px;
+  background-color: green;
+}
+
 /*Fuentes Externas*/
 /*Fuente local*/
 @font-face {
@@ -98,7 +162,7 @@ div {
 /*Selector de clase*/
 .img-home {
   border-radius: 50px;
-  border: 5px solid blue;
+  border: 5px solid #F08080;
   padding: 20px;
   margin: 30px 20px 15px 10px;
   width: 500px;
@@ -115,7 +179,7 @@ h1 {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   text-transform: uppercase;
-  color: gray;
+  color: #8f3985;
   cursor: pointer;
 }
 
@@ -269,7 +333,7 @@ h1, h3 {
 }
 
 /*efecto parallax*/
-.banner {
+.banner, .banner2 {
   width: 100%;
   height: 700px;
   background-image: url("../assets/img/hdelsolbackimg.jpg");

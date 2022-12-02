@@ -1,5 +1,6 @@
 @import "fuentes";
 @import "background";
+@import "colores";
 
 /*Variables Globales*/
 $background-principal: gray;
@@ -90,17 +91,68 @@ div {
     @include crearBordes(green, 5px, yellow);
 }
 
+/*Maps II*/
+$colors: (
+    twitter: #55acee,
+    facebook: #3a5795,
+    send-mail: #C25E30,
+    instagram: #0000,
+    linkding: #0e76a8,
+    size-banner: 25px
+);
 
+/*Each*/
+@each $name-color, $bg-color in $colors {
+    .boton--#{$name-color}{//interpolacion
+        background-color: $bg-color;
+    }
+}
 
+.banner{
+    background-color: map-get($map: $colors , $key: twitter );
+    width: map-get($map: $colors , $key: size-banner );
+}
 
+/*Extend II*/
+.banner{
+    width: 100%;
+    height: 700px;
+    background-color: $background-principal;
+}
 
+.banner2{
+    font-size: 25px;
+    color: green;
+    @extend .banner;
+}
 
+/*Mixin II*/
+@mixin newFondos(){
+    width: 100%;
+    height: 500px;
+    background-color: #C25E30;
+    color: red;
+}
 
+.banner2{
+    @include newFondos();
+}
 
+/*Mixin III*/
 
+@mixin sizes($width, $height, $bg-color){
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+}
 
+.banner2 {
+    @include sizes(500px, 50px, red);
+}
 
-
+.banner3 {
+    @include sizes(200px, 150px, green);
+}
 
 
 
@@ -122,7 +174,7 @@ div {
 /*Selector de clase*/
 .img-home{
     border-radius: 50px;
-    border: 5px solid blue;
+    border: 5px solid $color-primario;
     padding: 20px;
     margin: 30px 20px 15px 10px;
     width: 500px;
@@ -142,7 +194,7 @@ h1 {
     font-family: $font-secundaria;
     text-align: center;
     text-transform: uppercase;
-    color: gray;
+    color: $color-secundario;
     cursor: pointer;
 }
 
@@ -773,12 +825,6 @@ li {
             color:red;
             }
     }
-
-
-
-
-
-
 
 
 
