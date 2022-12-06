@@ -6,33 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Favicon-->
     <link rel="shortcut icon" href="../assets/icons/newIcon.svg" type="image/x-icon">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
     <!--Vinculacion Externa CSS-->
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Hotel del Sol - Promociones</title>
 </head>
-<body class="body-promociones">
+<body>
 
-    <nav>
-        <a href="../index.html">
-            <img src="../assets/logo/hotelDelSolLogo.png" alt="logo-hotel-del-sol" width="100px">
-        </a>
+   <!--Barra de navegacion con bootstrap-->
+<nav class="navbar navbar-expand-lg bg-info p-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../assets/logo/hotelDelSolLogo.png" alt="logo" width="100">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+        <!--Links-->
+        <ul  class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../pages/habitaciones.html">Habitaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Promociones</a>
+          </li>
 
-           
-                    <a href="../index.html">Home</a>   
-            
-               
-                    <a  href="#">Habitaciones
-                    </a>    
-             
-          
-                    <a href="./galeria-de-fotos.html" >Galería de Fotos
-                    </a>
-                
-                    <a href="./promociones.html">Promociones</a>
-             
-                    <a href="./contacto.html">Contacto</a>          
-            </ul>
-    </nav>
+          <li class="nav-item">
+            <a class="nav-link active" href="../pages/galeria-de-fotos.html">Galeria de Fotos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../pages/contacto.html">Contacto</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="buscar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+      </div>
+    </div>
+  </nav>
+
+  <h1 class="promociones-title">Aprovechá todo lo que tenemos para vos</h1>
+
+    <!--Tarjetas Bootstrap-->
+    <div class="container mb-3 mt-5">
+      <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                  <img class="card-img-top" src="../assets/img/desayuno.jpg" alt="desayuno">
+                  
+                  <div class="card-body">
+                  <h5>El mejor desayuno, con todo incluido</h5>
+                  <p class="card-text">Contamos con el mejor y más nutritivo desayuno, para que tu estadía sea innolvidable</p>
+                  <a href="#">
+                  <button class="btn btn-warning">Reservar</button>
+                  </a>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                  <img class="card-img-top" src="../assets/img/pileta.jpg" alt="pileta">
+                  
+                  <div class="card-body">
+                  <h5>Pileta Olímpica</h5>
+                  <p class="card-text">Un lugar para disfrutar en familia. El mejor lugar para vivir el verano</p>
+                  <a href="#">
+                  <button class="btn btn-warning">Reservar</button>
+                  </a>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                  <img class="card-img-top" src="../assets/img/sauna.jpg" alt="spa">
+                  <div class="card-body">
+                  <h5>Servicio de Spa</h5>
+                  <p class="card-text">Vení a relajar y a descansar en el mejor lugar de Buenos Aires</p>
+                  <a href="#">
+                  <button class="btn btn-warning">Reservar</button>
+                  </a>
+                  </div>
+              </div>
+          </div>
+      
+      </div>
+      </div>
 
     <!--Probamos todo lo aprendido en clase 08
     <h1>
@@ -40,7 +105,7 @@
     </h1>
     -->
 
-    <!--CSS Práctica-->
+    <!--CSS Práctica
     <h3 class="title-grid">css grid práctica</h3>
     <div class="grid-container">
         <div class="box-1">1</div>
@@ -55,9 +120,10 @@
         <div>10</div>
         <div>11</div>
         <div>12</div>
-    </div>   
+    </div>  
+    --> 
 
-    <!--First and last child-->
+    <!--First and last child
     <div class="grupo">
         <div class="parrafos">
             <p>Soy el primer párrafo</p>
@@ -65,8 +131,9 @@
             <p>Soy el tercer párrafo</p>
         </div>
     </div>
+    -->
 
-    <!--First and last-type-->
+    <!--First and last-type
     <div class="grupo">
         <div class="elementos">
            <div>Soy un div</div>
@@ -76,8 +143,9 @@
            <p>Soy otro párrafo</p>
         </div>
     </div>
+    -->
 
-    <!--nth-child() and nth-last-child()-->
+    <!--nth-child() and nth-last-child()
     <div class="grupo">
         <div class="lista">
             <li>Elemento #1</li>
@@ -92,9 +160,9 @@
             <li>Elemento #10</li>
         </div>
     </div>
+    -->
 
 
-
-
+<script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

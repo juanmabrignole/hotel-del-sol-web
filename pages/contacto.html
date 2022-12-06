@@ -17,99 +17,113 @@
 </head>
 <body id="body-contact">
 
-    <nav>
-
-        <a href="#">
-            <img src="../assets/logo/hotelDelSolLogo.png" alt="logo-hotel-del-sol" width="100px">
-        </a>
-
-           
-                    <a href="../index.html">Home</a>   
-            
-               
-                    <a  href="#">Habitaciones
-                    </a>    
-             
+    <nav class="navbar navbar-expand-lg bg-info p-2">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../assets/logo/hotelDelSolLogo.png" alt="logo" width="100">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
           
-                    <a href="./galeria-de-fotos.html" >Galería de Fotos
-                    </a>
-                
-                    <a href="./promociones.html">Promociones</a>
-             
-                    <a href="./contacto.html">Contacto</a>          
+            <!--Links-->
+            <ul  class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pages/habitaciones.html">Habitaciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="../pages/promociones.html">Promociones</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link active" href="../pages/galeria-de-fotos.html">Galeria de Fotos</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+              </li>
             </ul>
-    </nav>
-
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+          </div>
+        </div>
+      </nav>
+    
     <!--Formulario HTML-->
 
-    <h1>Te estamos esperando!</h1>
+    <!--Formulario de Contacto con Grid Responsive-->
+   <main class="body-contact">
 
-    <div class="container">
-    
-    <form class="row" action="procesar.php" method="get">
+    <div class="contenido">
+     <h1 class="nombre-empresa">Hotel<span>del Sol</span></h1>
+ 
+     <div class="contenedor-contacto">
+         <div class="formulario-contacto">
+             <h3>Decínos Hola</h3>
+             <form action="">
+                 <p>
+                     <label for="nombre-completo">Nombre completo</label>
+                     <input type="text" name="nombre-completo">
+                 </p>
+ 
+                 <p>
+                     <label for="correo">Correo Electrónico</label>
+                     <input type="email" name="correo">
+                 </p>
+ 
+                 <p>
+                     <label for="telefono">Teléfono</label>
+                     <input type="tel" name="telefono">
+                 </p>
+ 
+                 <p>
+                     <label for="asunto">Asunto</label>
+                     <input type="text" name="asunto">
+                 </p>
+ 
+                 <p class="bloque">
+                     <label for="mensaje">Mensaje</label>
+                     <textarea name="mensaje" rows="3"></textarea>
+                 </p>
+ 
+                 <p class="bloque">
+                     <button type="submit">
+                         Enviar
+                     </button>
+                 </p>
+ 
+             </form>
+         </div>
+ 
+         <div class="info-contacto">
+             <ul>
+                 <li><i class="fa-solid fa-location-dot"></i>Centenario 1250</li>
+                 <li><i class="fa-solid fa-phone"></i>11 4787-9477</li>
+                 <li><i class="fa-solid fa-envelope"></i>hola@hoteldelsol.com.ar</li>
+             </ul>
+ 
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum temporibus nemo, nihil quas aperiam ab facilis voluptas pariatur tempora a.</p>
+ 
+             <p>hoteldelsol.com.ar</p>
+ 
+         </div>
+     </div>
+    </div>
+ 
+ </main>
 
-        <div class="row m-2">
-        <div class="col-6">       
-        <label class="form-label"  for="nombre">Nombre:</label>
-        <input class="form-control" type="text" name="nombre" placeholder="Escriba su nombre">
-        </div>
+ <footer>
+    <h3>Desarrollado con la camada DW 44870 </h3>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-airbnb"></i>
+    <i class="fa-brands fa-twitter"></i>
 
-        <div class="col-6">
-        <label class="form-label" for="apellido">Apellido:</label>
-        <input class="form-control" type="text" name="apellido" placeholder="Escriba su nombre">
-        </div>
-        </div>
-
-        <div>
-        <label for="telefono">Teléfono:</label>
-        <input type="text" name="telefono" placeholder="Escriba su teléfono">
-        </div>
-
-        <div>
-        <label for="mail">Correo Electrónico:</label>
-        <input type="email" name="email" placeholder="Escriba su teléfono">
-        </div>
-
-        <div>
-        <label for="pass">Contraseña:</label>
-        <input type="password" name="pass" placeholder="Escriba su contraseña">
-        </div>
-
-        <!--Radio-->
-        <h3>Elija su habitación: </h3>
-
-        <label for="room">Clásica</label>
-        <input type="radio" name="room" value="clasica">
-
-        <label for="room">Large Suite</label>
-        <input type="radio" name="room" value="large-suite">
-
-        <label for="room">Studio</label>
-        <input type="radio" name="room" value="studio">
-
-        <!--Checkbox-->
-        <h3>Acepta términos y condiciones</h3>
-        <input type="checkbox" name="acepta" value="1">
-
-        <!--Menú Desplegable-->
-        <h3>¿Cuántos huéspedes se van a alojar?</h3>
-        <select name="huespedes">
-            <option value="1">Un huésped</option>
-            <option value="2">Dos huéspedes</option>
-            <option value="3">Tres huéspedes</option>
-        </select>
-
-        <h3>Mensaje: </h3>
-        <textarea name="mensaje" cols="30" rows="10"></textarea>
-
-        <div>
-        <button class="btn btn-outline-primary" type="submit">Enviar</button>
-       
-        </div>
-    
-    </form>
-</div>
-
+</footer>
+ 
+ 
     <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,14 +1,11 @@
-@charset "UTF-8";
-/*Variables Globales*/
-/*Operadores Matemáticos*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-body {
+
+/*body {
   background-color: red;
   padding: 20px;
   width: 1080px;
-}
+}*/
 
-/*Bucle FOR*/
+/*Bucle FOR
 h1 {
   font-size: 10px;
 }
@@ -27,9 +24,9 @@ h4 {
 
 h5 {
   font-size: 50px;
-}
+}*/
 
-/*Bucle Each*/
+/*Bucle Each
 .red {
   background-color: red;
 }
@@ -53,41 +50,47 @@ h5 {
 .black {
   background-color: black;
 }
+*/
 
-/*Maps*/
+/*Maps
 div {
   background-color: green;
   text-align: center;
   padding: 35px;
   font-size: 1rem;
 }
+*/
 
-/*Extend*/
+/*Extend
 .card, .usercard {
   background: #fff;
   border-radius: 5px;
   padding: 16px;
   box-shadow: 1px 1px 12px 0px;
 }
+*/
 
-/*Mixins*/
+/*Mixins
 .caja {
   border: 10px solid red;
   border-radius: 10px;
   box-shadow: 0px 0px 10px black;
 }
+*/
 
+/*
 .caja2 {
   border: 5px solid green;
   border-radius: 5px;
   box-shadow: 0px 0px 5px yellow;
-}
+}*/
 
 /*Maps II*/
-/*Each*/
+/*Each
 .boton--twitter {
   background-color: #55acee;
 }
+
 
 .boton--facebook {
   background-color: #3a5795;
@@ -113,8 +116,9 @@ div {
   background-color: #55acee;
   width: 25px;
 }
+*/
 
-/*Extend II*/
+/*Extend II
 .banner, .banner2 {
   width: 100%;
   height: 700px;
@@ -125,16 +129,18 @@ div {
   font-size: 25px;
   color: green;
 }
+*/
 
-/*Mixin II*/
+/*Mixin II
 .banner2 {
   width: 100%;
   height: 500px;
   background-color: #C25E30;
   color: red;
 }
+*/
 
-/*Mixin III*/
+/*Mixin III
 .banner2 {
   width: 500px;
   height: 50px;
@@ -146,8 +152,10 @@ div {
   height: 150px;
   background-color: green;
 }
+*/
 
 /*Fuentes Externas*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 /*Fuente local*/
 @font-face {
   font-family: "lato-bold";
@@ -157,6 +165,10 @@ div {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.navbar-nav{
+  font-size: 24px;
 }
 
 /*Selector de clase*/
@@ -174,9 +186,9 @@ div {
 .body-promociones{
     background-color: black;
 }
-*/
+
 h1 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "roboto", sans-serif;
   text-align: center;
   text-transform: uppercase;
   color: #8f3985;
@@ -185,14 +197,14 @@ h1 {
 
 h1 span {
   transition: 0.5s linear;
-}
+}*/
 
-/*paso el mousse por h1 y el primer span se mueve a la derecha*/
+/*paso el mousse por h1 y el primer span se mueve a la derecha
 h1:hover span:nth-child(1) {
   margin-right: 5px;
-}
+}*/
 
-/*Despúes del pasar el mousse*/
+/*Despúes del pasar el mousse
 h1:hover span:nth-child(1)::after {
   content: "'";
 }
@@ -201,11 +213,12 @@ h1:hover span:nth-child(2) {
   margin-left: 30px;
 }
 
-h1:hover span {
-  /*Sombra horizontal (x) - Sombra Vertical (y) - blur - color de la sobra*/
+h1:hover span {*/
+  /*Sombra horizontal (x) - Sombra Vertical (y) - blur - color de la sobra
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
   color: #fff;
-}
+}*/
+
 
 .animacion-personalizada {
   /*animate.css*/
@@ -221,7 +234,6 @@ h2 {
   font-family: "lato-bold", sans-serif;
   font-weight: 700;
   font-size: 25px;
-  font-style: italic;
   text-align: center;
   color: darkorange;
   word-spacing: 5px;
@@ -230,9 +242,7 @@ h2 {
   margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
-  padding: 50px;
-  border: 2px solid green;
-  background-color: red;
+  padding: 5px;
 }
 
 #texto-home {
@@ -240,55 +250,184 @@ h2 {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 25px;
+  margin: 10px;
 }
 
-/*background color*/
+.carousel-item {
+  max-height: 50rem;
+}
+
+.habitaciones-title{
+  font-size: 30px;
+  font-family: "lato-bold", sans-serif;
+  letter-spacing: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.promociones-title{
+  font-size: 30px;
+  font-family: "lato-bold", sans-serif;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.instalaciones-title{
+  font-size: 30px;
+  font-family: "lato-bold", sans-serif;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+iframe {
+  text-align: center;
+  margin-left: 32%;
+}
+
+/*Formulario de Contacto*/
+.body-contact {
+  color: #fff;
+  font-family: "lato-bold", sans-serif;
+  padding: 0 1.5rem;
+}
+
+.contenido {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.nombre-empresa {
+  margin-bottom: 1rem;
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.nombre-empresa span {
+  color: #f10086;
+}
+
+.contenedor-contacto {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+}
+
+.contenedor-contacto > * {
+  padding: 1rem;
+}
+
+.formulario-contacto {
+  background-color: slategray;
+}
+
+.formulario-contacto form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.formulario-contacto form .bloque {
+  grid-column: 1/3;
+}
+
+.formulario-contacto form p {
+  margin: 0;
+  padding: 1em;
+  color: white;
+}
+
+.formulario-contacto form button,
+.formulario-contacto form input,
+.formulario-contacto form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid #f10086;
+  color: #fff;
+}
+
+.formulario-contacto form button {
+  background-color: #f10086;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.info-contacto {
+  background-color: #000;
+}
+
+.info-contacto ul,
+.info-contacto p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.info-contacto ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-contacto ul li {
+  padding: 0.3rem;
+}
+
+
+/*background color
 body {
   background-color: beige;
 }
+*/
 
-/*Background Image Contacto*/
+/*Background Image Contacto
 #body-contact {
-  color: white;
-  /*background-image: url("../assets/img/hdelsolbackimg.jpg");*/
+  color: white;*/
+  /*background-image: url("../assets/img/hdelsolbackimg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+*/
 
 /*Comentario en CSS*/
 /*Flexbox*/
 /*Navbar con Flexbox*/
-nav {
+/*nav {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-}
+}*/
 
-/*Flexbox práctica*/
+/*Flexbox práctica
 .flex-container {
   border: 1px solid black;
   background: #ccc;
   padding: 20px;
   margin: 10px;
   height: 800px;
+  */
   /*propiedades de flexbox*/
-  /*Activamos flex*/
-  display: flex;
-  /*Define el eje principal o main axis*/
-  flex-direction: row;
-  /*flex-wrap*/
-  flex-wrap: wrap;
+  /*Activamos flex
+  display: flex;*/
+  /*Define el eje principal o main axis
+  flex-direction: row;*/
+  /*flex-wrap
+  flex-wrap: wrap;*/
   /*flex-flow: row wrap;*/
-  /*Eje principal*/
-  justify-content: flex-start;
-  /*eje secundario*/
-  align-items: flex-start;
-  /*espaciado entre lineas*/
+  /*Eje principal
+  justify-content: flex-start;*/
+  /*eje secundario
+  align-items: flex-start;*/
+  /*espaciado entre lineas
   align-content: space-around;
-}
+}*/
+
 
 .caja {
   /*box-modeling*/
@@ -305,7 +444,7 @@ nav {
   text-align: center;
 }
 
-.caja1 {
+/*.caja1 {
   background-color: lightcoral;
   order: 2;
   flex-grow: 1;
@@ -321,7 +460,7 @@ nav {
   background-color: lightsalmon;
   order: 1;
   flex-grow: 2;
-}
+}*/
 
 /*Form con bootstrap*/
 label {
@@ -544,14 +683,30 @@ button:active .button_top {
   max-width: 1000px;
   margin: 20px auto;
   border-radius: 10px;
-  border: 1px solid black;
   /*gradientes*/
   /*Linear-gradient*/
   /*background-image: linear-gradient(to right, red, yellow, gray, green, blue, black);*/
   /*radial-gradient*/
   /*background-image: radial-gradient(red, yellow);*/
   /*Sitio web gradientes*/
-  background-image: linear-gradient(181deg, rgb(225, 109, 245) 6.9%, rgb(78, 248, 231) 112.8%);
+  /*background-image: linear-gradient(181deg, rgb(225, 109, 245) 6.9%, rgb(78, 248, 231) 112.8%);*/
+}
+
+.hotel-del-sol-title{
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-family: "lato-bold", sans-serif;
+  text-transform: uppercase;
+
+  margin: 10px auto;
+}
+
+.hotel-del-sol-subtitle{
+  font-family: "lato-bold"sans-serif;
+  font-size: 20px;
+  text-transform: lowercase;
+  text-align: center;
 }
 
 /*Transformaciones*/
@@ -623,7 +778,7 @@ a {
   text-decoration: underline;
 }
 
-/*Pseudoclases*/
+/*Pseudoclases
 a:hover {
   background: #f10086;
   border-radius: 5px;
@@ -644,9 +799,10 @@ a:link {
 a:visited {
   color: red;
 }
+*/
 
 /*First & last-child*/
-.grupo {
+/*.grupo {
   width: 500px;
   margin: 20px auto;
   background-color: gray;
@@ -662,9 +818,9 @@ a:visited {
 .parrafos p:last-child {
   background: black;
   color: white;
-}
+}/*
 
-/*First and last-type*/
+/*First and last-type
 .elementos p:first-of-type {
   background: #f10086;
   color: white;
@@ -683,14 +839,14 @@ a:visited {
 .elementos div:last-of-type {
   background: blue;
   color: white;
-}
+}*/
 
 /*nth-child() and nth-last-child()*/
-/*nth-child()*/
+/*nth-child()
 .lista :nth-child(even) {
   background: #00cdf1;
   color: black;
-}
+}*/
 
 /*
 .lista :nth-child(4){
@@ -711,7 +867,7 @@ a:visited {
 }
 */
 /*SASS*/
-/*Anidacion-nesting I*/
+/*Anidacion-nesting I
 .clase1 {
   width: 100px;
   height: 100px;
@@ -730,8 +886,9 @@ a:visited {
 .clase1 .clase2 h1 p {
   font-size: 26px;
 }
+*/
 
-/*Anidacion-nestingII*/
+/*Anidacion-nestingII
 ul {
   list-style: none;
 }
@@ -744,14 +901,16 @@ ul li a {
   font-size: 16px;
   color: #444;
 }
+*/
 
-/*USO DEL & CON EL NESTING*/
+/*USO DEL & CON EL NESTING
 li {
   color: blue;
 }
 li:active {
   color: red;
 }
+*/
 
 /*mediaQueries*/
 /*Grid Responsive*/
